@@ -1,0 +1,311 @@
+/*PROPIEDADES GLOBALES*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Baskerville', sans-serif;
+	background-color: #5d8db4;
+	color: #ECF0F1;
+	text-decoration: none;
+	font-weight: bold;
+	
+}
+/*PLANTILLA PERFIL*/
+body#Perfil main article div.initBox{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  	align-items: flex-start;
+    float: left;
+    padding: 1%;
+}
+
+/*CABECERA*/
+body#Perfil header#cabecera div.container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	/*justify-content: center;*/
+  	align-items: center;
+}
+
+body#Perfil header#cabecera div.container{
+	
+	margin: 1%;
+	height: 50%;
+}
+
+body#Perfil header#cabecera div.container div.LogoPerfil img{
+	
+	max-height: 10vh;
+  	width: auto;
+}
+
+/*PANEL DERECHO*/
+aside {
+	padding: 0.5%;
+	width: 50%;
+	min-height: 75vh;
+	height: 100%;
+	display:block;
+}
+
+aside#sideBarDer {
+	margin-top: 50px;
+	float: right;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+    background-color: #ECF0F1;
+	
+}
+h1{
+	color:#F5B041;
+}
+
+
+.marco{
+	background-color: white;
+}
+aside#sideBarDer div.listaProyectos div.boxes{
+    background-color: #ECF0F1;
+
+}
+aside#sideBarDer h1{
+    background-color: #F5B041;
+	
+}
+aside#sideBarDer div.listaProyectos h3{
+    background-color: #F5B041;
+	font-size: 15px;
+}
+aside#sideBarDer div.listaProyectos div.boxes div.caja{
+    background-color: #ECF0F1
+}
+div.listaProyectos{
+	margin-top: 20px;
+	width: 600px;
+	background-color: #ECF0F1;
+}
+.botonPeque{
+	padding: 15px 20px;
+	width: 200;
+	background: #F5B041;
+	background-color: #F5B041;
+	font-size: x-large;	
+	color: F5B041;
+	border:4;
+	outline:none;
+	cursor:pointer;
+	font-size:22px;
+	font-weight:500;
+	border-radius:30px;
+	font-size: 16px;
+	text-align: center;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.botonPeque:hover {
+	background-color: #2C3E50; 
+	color:#F5B041;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	
+  }
+
+  select#match.input{
+	text-align: center;
+	background-color: #F5B041;
+	color: black;
+	font-size: 20px;
+}
+
+button.botonEleccion{
+	color: #F5B041;
+	width: 25px;
+	height: 20px;
+}
+
+h1.element.tituloPerfil{
+	color:black;
+	padding: 0;
+	font-size: 36px;
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+h1.element.titulo{
+	color:black;
+	padding: 0;
+	font-size: 30px;
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+
+form#formBusqueda{
+	justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  background-color: #ECF0F1;
+}
+
+div.titulo-container {
+	border: 5px solid black;
+	background-color: white;
+	width: 350px;
+	height: 50px;
+  }
+  
+div.descripcion-container {
+	padding: 10px; 
+	border: 3px solid black;
+	background-color: white;
+	width: 350px;
+	height: 50px;
+  }
+  
+div.botones-container {
+	padding: 15px;
+	text-align: center;
+	border: 3px solid black;
+	background-color: white;
+	width: 350px;
+	height: 50px;
+  }
+  
+  button {
+	background-color: #F1948A;
+	border: none;
+	padding: 10px 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	cursor: pointer;
+  }
+  
+
+form#formAceptarMatch{
+	justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  background-color: #ECF0F1;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+div.caja{
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+h1.titulo{
+	color:black;
+	background-color: white;
+	font-size: 26px;
+   margin-bottom: 10px;
+   padding: 10px; /* Agregar espacio alrededor del título */
+  
+
+}
+h3.element.Lista{
+	color:black;
+	padding: 0;
+	font-size: 26px;
+    font-weight: bold;
+	padding: 50px; /* Agregar espacio alrededor del título */
+   	border: 1px solid black; /* Agregar un borde sólido negro */
+
+}
+
+h3.element.ListaPerfil{
+	color:black;
+	padding: 0;
+	font-size: 18px;
+    font-weight: bold;
+	margin-bottom: 10px;
+
+}
+
+div.box{
+	margin-top: 10px; /* Agregar 10 píxeles de espacio entre los divs */
+	align-items: center;
+	color: white;
+	margin-top: 15px;
+	background-color: #ECF0F1;
+}
+h3.element.ListaTabla{
+	color:black;
+	padding: 0;
+	font-size: 18px;
+    font-weight: bold;
+	background-color: #ECF0F1;
+}
+p.descripcion{
+	font-size: 15px;
+	background-color: white;
+	color: black;
+} 
+form#formBusqueda{
+	align-items:baseline;
+	width: 600px;
+	margin-bottom: 30px;
+	
+}
+a.editar {
+    background-color: #bababa;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  }
+a.editBoton{
+	border-radius: 5px;
+	background-color: white;
+	display: inline-block;
+	margin-right: 10px;
+	border: 2px solid gray;
+	border-radius: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+  }
+ 
+
+  a.editBoton:hover {
+	background-color: #bababa;
+  }
+
+
+a.editar:hover {
+    background-color: #3e8e41;
+  }
+
+div#match.match{
+	width: 600px;
+	height: 450px;
+	text-align: center;
+    border: none;
+	background-color: #ECF0F1;	
+  justify-content: center;
+  color: white;
+
+}
+
+h1.element.titulo.cabecera{
+	font-size: 60px;
+	text-decoration: underline;
+}

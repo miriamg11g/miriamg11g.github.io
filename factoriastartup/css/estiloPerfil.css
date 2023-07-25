@@ -1,0 +1,374 @@
+/* CSS DE MIS PROYECTOS*/
+
+body#Perfil div.todosProyectos{
+
+	margin-left: 28%;
+	margin-right: 5%;
+	padding-top: 3%;
+	
+}
+
+body#Perfil div.todosProyectos div.anadirProy{
+	display: flex;
+	flex-direction: row-reverse;
+	padding-left: 8%;
+}
+
+body#Perfil div.todosProyectos div.anadirProy h3{
+	flex-grow: 1;
+	font-size: 1.7vw;
+}
+
+.button.proyecto {
+	padding: 0 18px ;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 36px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+  }
+  
+  .button.proyecto:hover {
+	background-color: #555555;
+	color: white;
+  }
+
+  body#Perfil div.todosProyectos div.proyecto{
+	box-shadow: 0px 0px 3px #ccc;
+	margin-top: 3%;
+	padding: 2%;
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.fila{
+	display: flex;
+	flex-direction: row;
+	/*align-items: center;*/
+	font-size: 1.2vw;
+	
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.filaTitulo{
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.filaTitulo h2{
+	font-size: 1.5vw;
+	font-family: Arial, sans-serif;
+	text-align:left;
+	padding-left: 16%;
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.fila div.columnaImg{
+	width: 30vw;
+	height: 20vw;
+	padding: 1%;
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.fila div.columna{
+	width: 40vw;
+	height: 18vw;
+	
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.fila div.columna p{
+
+	font-size: 1.25vw;
+  }
+
+  body#Perfil div.todosProyectos div.proyecto div.fila img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+  .papelera {
+    width: 2.5vw;
+    height: 2.7vw;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fa-trash-alt {
+    font-size: 100%;
+    color: #888;
+  }
+
+/*FIN DE MIS PROYECTOS*/
+
+/* INICIO DE MIS POST*/
+body#Perfil div.todosPost, body#Perfil div.todosEventos,body#Perfil div.todosMatches{
+
+	margin-left: 28%;
+	margin-right: 5%;
+	padding-top: 3%;
+	
+}
+
+body#Perfil div.todosMatches div.match {
+    background-color: aliceblue;
+    margin-bottom: 30px;
+    border: 1px solid black;
+	margin-left: 30px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+body#Perfil div.todosMatches div.matchNo div.filaTitulo h2, body#Perfil div.todosPost div.matchNo div.filaTitulo h2, body#Perfil div.todosProyectos div.matchNo div.filaTitulo h2, body#Perfil div.todosEventos div.matchNo div.filaTitulo h2{
+	margin-left: 50px;
+}
+body#Perfil div.todosMatches div.matchNo, body#Perfil div.todosPost div.matchNo, body#Perfil div.todosProyectos div.matchNo, body#Perfil div.todosEventos div.matchNo {
+    background-color: aliceblue;
+    margin-bottom: 30px;
+    border: 1px solid black;
+	margin-left: 30px;
+}
+
+
+
+body#Perfil div.todosPost div.anadirPost, body#Perfil div.todosEventos div.anadirEventos, body#Perfil div.todosMatches div.anadirMatches1, body#Perfil div.todosMatches div.anadirMatches2{
+	display: flex;
+	flex-direction: row-reverse;
+	padding-left: 8%;
+}
+
+body#Perfil div.todosPost div.anadirPost h3, body#Perfil div.todosEventos div.anadirEventos h3, body#Perfil div.todosMatches div.anadirMatches1 h3, body#Perfil div.todosMatches div.anadirMatches2 h3{
+	flex-grow: 1;
+	font-size: 1.7vw;
+}
+
+.button.post {
+	padding: 0 18px ;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 36px;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+
+	background-color: white;
+	color: black;
+	border: 2px solid #555555;
+  }
+  
+  .button.post:hover {
+	background-color: #555555;
+	color: white;
+  }
+
+  body#Perfil div.todosPost div.post, body#Perfil div.todosEventos div.evento{
+	box-shadow: 0px 0px 3px #ccc;
+	margin-top: 3%;
+	padding: 2%;
+  }
+
+  body#Perfil div.todosPost div.post div.fila, body#Perfil div.todosEventos div.evento div.fila{
+	display: flex;
+	flex-direction: row;
+	/*align-items: center;*/
+	font-size: 1.2vw;
+	padding-left: 16%;;
+	
+  }
+  body#Perfil div.todosMatches div.anadirMatches1 div.match div.fila, body#Perfil div.todosMatches div.match div.fila{
+	display: flex;
+	flex-direction: row;
+	/*align-items: center;*/
+	font-size: 1.2vw;
+	padding-left: 9%;;
+	
+  }
+
+  body#Perfil div.todosPost div.post div.filaTitulo, body#Perfil div.todosEventos div.evento div.filaEvento, body#Perfil div.todosMatches div.anadirMatches2 div.match div.filaTitulo{
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body#Perfil div.todosMatches div.match div.filaTitulo{
+
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 2%;
+  }
+
+  body#Perfil div.todosMatches div.match div.filaTitulo div.emoticonos a{
+
+	cursor: pointer;
+    color: #fff;
+    background-color: #004b8d;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    text-transform: capitalize;
+    border: none;
+  }
+
+  body#Perfil div.todosMatches div.match div.filaTitulo div.emoticonos a:hover{
+
+	background-color: #2595be62;
+    color: #333;
+  }
+
+  body#Perfil div.todosPost div.post div.filaTitulo h2, body#Perfil div.todosEventos div.evento div.filaEvento h2{
+	font-size: 1.5vw;
+	font-family: Arial, sans-serif;
+	text-align:left;
+	padding-left: 16%;
+  }
+  body#Perfil div.todosMatches div.match div.filaTitulo h2{
+	font-size: 1.5vw;
+	font-family: Arial, sans-serif;
+	text-align:left;
+	padding-left: 8%;
+  }
+
+  body#Perfil div.todosPost div.post div.fila div.columnaImg{
+	width: 30vw;
+	height: 20vw;
+	padding: 1%;
+  }
+
+  body#Perfil div.todosPost div.post div.fila div.columna, body#Perfil div.todosEventos div.evento div.fila div.columna{
+	width: 40vw;
+	height: 18vw;
+	
+  }
+   body#Perfil div.todosMatches div.match div.fila div.columna{
+   }
+
+  body#Perfil div.todosPost div.post div.fila div.columna p, body#Perfil div.todosEventos div.evento div.fila div.columna p, body#Perfil div.todosMatches div.match div.fila div.columna p{
+
+	font-size: 1.25vw;
+  }
+
+  body#Perfil div.todosMatches div.match div.fila div.columna a{
+	text-decoration: none;
+	color: blue;
+  }
+
+  body#Perfil div.todosPost div.post div.fila img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
+
+
+/*FIN DE MIS POST*/
+
+/* INICIO DE INFO USER*/
+body#Perfil div.todoInfo{
+
+	margin-left: 28%;
+	margin-right: 5%;
+	padding-top: 3%;
+
+	
+}
+
+body#Perfil div.todoInfo div.titulo{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: Arial,Helvetica,sans-serif;
+	align-items: center;
+}
+
+body#Perfil div.todoInfo div.info{
+	font-family: Arial,Helvetica,sans-serif;
+	background-color: #f1f1f1;
+	font-size: 1.5vw;
+	box-shadow: 0px 0px 5px #ccc;
+	padding: 2%;
+}
+
+body#Perfil div.todoInfo div.boton button{
+	cursor: pointer;
+    color: #fff;
+    background-color: #2596be;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    /* width: auto; */
+    text-transform: capitalize;
+    border: none;
+
+}
+
+body#Perfil div.todoInfo div.boton button:hover{
+	background-color: #2595be62;
+    color: #333;
+}
+
+body#Perfil div.todoInfo div.columnaImg {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+
+}
+
+body#Perfil div.todoInfo div.columnaImg img{
+
+	width: 100%;
+  /* Asegura que la altura se ajuste proporcionalmente al ancho */
+   /* max-width: 100%;Evita que la imagen se desborde del contenedor */
+  	object-fit:scale-down;
+  	border-radius: 15%;
+}
+
+body#Perfil div.todoInfo div.info{
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+body#Perfil div.todoInfo div.info div.fila{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+body#Perfil div.todoInfo div.info div.fila input{
+	font-size: 1.5vw;
+}
+
+body#Perfil div.todoInfo div.tituloEditarPerfil{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex;
+	font-family: Arial,Helvetica,sans-serif;
+	align-items: center;
+}
+
+body#Perfil div.todoInfo div.tituloEditarPerfil a.button.proyecto{
+	color:#2596be;
+}
+
+/*FIN DE INFO USER*/

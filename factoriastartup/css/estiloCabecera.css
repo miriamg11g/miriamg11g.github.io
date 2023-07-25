@@ -1,0 +1,105 @@
+/*body#Proyectos{
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+*/
+/*ESTILO CABECERA*/
+header#cabeceraInicio div#columnas{
+    display:flex;
+    /*position:relative;*/
+    align-items: center;
+    flex-direction: row;
+    pointer-events: auto;
+    justify-content: space-between;
+
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.5vw;
+}
+
+header#cabeceraInicio {
+    /*height: 100px; *//* Altura del encabezado */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f2f2f2;
+}
+
+header#cabeceraInicio div#columnas div.columna2{
+    width: 100%;
+    height: 100%;
+
+    
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar ul, header#cabeceraInicio div#columnas div.columna2 nav.admin ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2596be;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0; 
+    height: 8%;
+}
+
+/*
+@media screen and (max-width: 1300px) {
+    header#cabeceraInicio div#columnas div.columna2 nav.navbar {
+      font-size: 16px;
+    }
+  }*/
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li, header#cabeceraInicio div#columnas div.columna2 nav.admin li {
+    float: right;    
+    height: 100%;
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li:first-child, header#cabeceraInicio div#columnas div.columna2 nav.admin li:first-child{
+    float: left;
+    max-height: 51px;
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li:nth-child(2), header#cabeceraInicio div#columnas div.columna2 nav.admin li:nth-child(2){
+    float: left;
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li:first-child img, header#cabeceraInicio div#columnas div.columna2 nav.admin li:first-child img{
+    height: 45px;
+}
+  
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li a, header#cabeceraInicio div#columnas div.columna2 nav.admin li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 100%;
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li:first-child a, header#cabeceraInicio div#columnas div.columna2 nav.admin li:first-child a{
+    padding: 3px 20px;
+}
+  
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li a:hover:not(.active), header#cabeceraInicio div#columnas div.columna2 nav.admin li a:hover:not(.active) {
+    background-color: #165f7a;
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li:nth-child(1) a:hover:not(.active), header#cabeceraInicio div#columnas div.columna2 nav.admin li:nth-child(1) a:hover:not(.active) {
+    background-color: transparent;
+    transform:translateY(-2px);
+}
+
+header#cabeceraInicio div#columnas div.columna2 nav.navbar li:nth-child(2) a:hover:not(.active), header#cabeceraInicio div#columnas div.columna2 nav.admin li:nth-child(2) a:hover:not(.active) {
+    background-color: transparent;
+    transform:translateY(-2px);
+}
+  
+header#cabeceraInicio div#columnas div.columna2 nav.navbar .active, header#cabeceraInicio div#columnas div.columna2 nav.admin .active {
+    background-color: #04AA6D;
+}
+/*FIN ESTILO CABECERA*/

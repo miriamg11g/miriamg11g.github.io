@@ -1,0 +1,508 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 28-02-2023 a las 18:25:48
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `factoriastartup`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `busqueda_colaboradores`
+--
+
+CREATE TABLE `busqueda_colaboradores` (
+  `id_busqueda` int(30) NOT NULL,
+  `id_usuario` int(30) NOT NULL,
+  `id_proyecto` int(30) NOT NULL,
+  `porcentaje_empresa` int(10) DEFAULT NULL,
+  `porcentaje_ventas` int(11) NOT NULL,
+  `id_sector` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `busqueda_proyectos`
+--
+
+CREATE TABLE `busqueda_proyectos` (
+  `id_busqueda` int(30) NOT NULL,
+  `id_usuario` int(30) NOT NULL,
+  `id_sector` int(30) NOT NULL,
+  `porcentaje_ventas` int(10) DEFAULT NULL,
+  `porcentaje_empresa` int(11) NOT NULL,
+  `mensaje` text NOT NULL,
+  `id_proyecto` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `credenciales`
+--
+
+CREATE TABLE `credenciales` (
+  `id_credencial` int(30) NOT NULL,
+  `correo` varchar(30) NOT NULL,
+  `contraseña` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `credenciales`
+--
+
+INSERT INTO `credenciales` (`id_credencial`, `correo`, `contraseña`) VALUES
+(1, 'admin@factoriastartup.com', 'factoria1234');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `matches`
+--
+
+CREATE TABLE `matches` (
+  `id_match` varchar(20) NOT NULL,
+  `confirmado` tinyint(1) NOT NULL,
+  `descripcion` text NOT NULL,
+  `id_busqueda_colab` varchar(20) NOT NULL,
+  `id_busqueda_proy` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `matches`
+--
+
+INSERT INTO `matches` (`id_match`, `confirmado`, `descripcion`, `id_busqueda_colab`, `id_busqueda_proy`) VALUES
+('234', 1, 'se trata de un proyecto cuya funcionaidad es.....', '2345', 'Tratamiento Base de '),
+('2384', 1, 'se trata de un proyecto cuya funcionaidad es.....', '2345', 'Tratamiento Base de '),
+('305767', 0, 'se puede ver que es un proyecto de mucha perflejidad', '134559', 'Marketing digital y '),
+('35767', 0, 'se puede ver que es un proyecto de mucha perflejidad', '134559', 'Marketing digital y ');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `negociacion`
+--
+
+CREATE TABLE `negociacion` (
+  `id_negociacion` int(15) NOT NULL,
+  `descripcion` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `negociacion`
+--
+
+INSERT INTO `negociacion` (`id_negociacion`, `descripcion`) VALUES
+(1, '% de la empresa'),
+(2, '% de las ventas'),
+(3, 'Obra y servicio'),
+(4, 'Pacto a futuro');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `perfiles`
+--
+
+CREATE TABLE `perfiles` (
+  `id_perfiles` int(15) NOT NULL,
+  `descripcion` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proyectos`
+--
+
+CREATE TABLE `proyectos` (
+  `id_proyecto` int(30) NOT NULL,
+  `id_propietario` int(30) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `short_description` text DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `needs_description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos`
+--
+
+INSERT INTO `proyectos` (`id_proyecto`, `id_propietario`, `nombre`, `short_description`, `description`, `needs_description`) VALUES
+(1, 1, 'Proyecto de Prueba', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Diseño Gráfico');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rel_neg_busquedacolab`
+--
+
+CREATE TABLE `rel_neg_busquedacolab` (
+  `id_relacion` int(30) NOT NULL,
+  `id_busqueda` int(30) NOT NULL,
+  `id_negociacion` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rel_neg_proy`
+--
+
+CREATE TABLE `rel_neg_proy` (
+  `id_relacion` int(30) NOT NULL,
+  `id_busqueda` int(30) NOT NULL,
+  `id_negociacion` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rel_proy_perfilnecesario`
+--
+
+CREATE TABLE `rel_proy_perfilnecesario` (
+  `id_relacion` int(30) NOT NULL,
+  `id_proyecto` int(30) NOT NULL,
+  `id_perfilnecesario` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rel_proy_sector`
+--
+
+CREATE TABLE `rel_proy_sector` (
+  `id_relacion` int(30) NOT NULL,
+  `id_proyecto` int(30) NOT NULL,
+  `id_sector` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rel_usuario_perfil`
+--
+
+CREATE TABLE `rel_usuario_perfil` (
+  `id_relacion` int(30) NOT NULL,
+  `id_usuario` int(30) NOT NULL,
+  `id_perfil` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sectores`
+--
+
+CREATE TABLE `sectores` (
+  `id_sector` int(30) NOT NULL,
+  `descripcion` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `sectores`
+--
+
+INSERT INTO `sectores` (`id_sector`, `descripcion`) VALUES
+(1, 'Formación'),
+(2, 'Videojuegos'),
+(3, 'Comunicación'),
+(4, 'Estilo de Vida'),
+(5, 'Tecnología');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id_usuario` int(30) NOT NULL,
+  `id_credencial` int(30) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `descripcion_aptitudes` text DEFAULT NULL,
+  `ubicacion` varchar(15) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `id_credencial`, `nombre`, `descripcion_aptitudes`, `ubicacion`) VALUES
+(1, 1, 'Administrador', 'Administración', 'Madrid');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `busqueda_colaboradores`
+--
+ALTER TABLE `busqueda_colaboradores`
+  ADD PRIMARY KEY (`id_busqueda`),
+  ADD KEY `id_usuario` (`id_usuario`);
+
+--
+-- Indices de la tabla `busqueda_proyectos`
+--
+ALTER TABLE `busqueda_proyectos`
+  ADD PRIMARY KEY (`id_busqueda`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_sector` (`id_sector`);
+
+--
+-- Indices de la tabla `credenciales`
+--
+ALTER TABLE `credenciales`
+  ADD PRIMARY KEY (`id_credencial`);
+
+--
+-- Indices de la tabla `matches`
+--
+ALTER TABLE `matches`
+  ADD PRIMARY KEY (`id_match`);
+
+--
+-- Indices de la tabla `negociacion`
+--
+ALTER TABLE `negociacion`
+  ADD PRIMARY KEY (`id_negociacion`);
+
+--
+-- Indices de la tabla `perfiles`
+--
+ALTER TABLE `perfiles`
+  ADD PRIMARY KEY (`id_perfiles`);
+
+--
+-- Indices de la tabla `proyectos`
+--
+ALTER TABLE `proyectos`
+  ADD PRIMARY KEY (`id_proyecto`),
+  ADD KEY `id_propietario` (`id_propietario`);
+
+--
+-- Indices de la tabla `rel_neg_busquedacolab`
+--
+ALTER TABLE `rel_neg_busquedacolab`
+  ADD PRIMARY KEY (`id_relacion`),
+  ADD KEY `id_busqueda` (`id_busqueda`),
+  ADD KEY `id_negociacion` (`id_negociacion`);
+
+--
+-- Indices de la tabla `rel_neg_proy`
+--
+ALTER TABLE `rel_neg_proy`
+  ADD PRIMARY KEY (`id_relacion`),
+  ADD KEY `id_busqueda` (`id_busqueda`),
+  ADD KEY `id_negociacion` (`id_negociacion`);
+
+--
+-- Indices de la tabla `rel_proy_perfilnecesario`
+--
+ALTER TABLE `rel_proy_perfilnecesario`
+  ADD PRIMARY KEY (`id_relacion`),
+  ADD KEY `id_proyecto` (`id_proyecto`),
+  ADD KEY `id_perfilnecesario` (`id_perfilnecesario`);
+
+--
+-- Indices de la tabla `rel_proy_sector`
+--
+ALTER TABLE `rel_proy_sector`
+  ADD PRIMARY KEY (`id_relacion`),
+  ADD KEY `id_proyecto` (`id_proyecto`),
+  ADD KEY `id_sector` (`id_sector`);
+
+--
+-- Indices de la tabla `rel_usuario_perfil`
+--
+ALTER TABLE `rel_usuario_perfil`
+  ADD PRIMARY KEY (`id_relacion`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_perfil` (`id_perfil`);
+
+--
+-- Indices de la tabla `sectores`
+--
+ALTER TABLE `sectores`
+  ADD PRIMARY KEY (`id_sector`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD KEY `id_credencial` (`id_credencial`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `busqueda_colaboradores`
+--
+ALTER TABLE `busqueda_colaboradores`
+  MODIFY `id_busqueda` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `busqueda_proyectos`
+--
+ALTER TABLE `busqueda_proyectos`
+  MODIFY `id_busqueda` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `credenciales`
+--
+ALTER TABLE `credenciales`
+  MODIFY `id_credencial` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `negociacion`
+--
+ALTER TABLE `negociacion`
+  MODIFY `id_negociacion` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de la tabla `perfiles`
+--
+ALTER TABLE `perfiles`
+  MODIFY `id_perfiles` int(15) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `proyectos`
+--
+ALTER TABLE `proyectos`
+  MODIFY `id_proyecto` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `rel_neg_busquedacolab`
+--
+ALTER TABLE `rel_neg_busquedacolab`
+  MODIFY `id_relacion` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `rel_neg_proy`
+--
+ALTER TABLE `rel_neg_proy`
+  MODIFY `id_relacion` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `rel_proy_perfilnecesario`
+--
+ALTER TABLE `rel_proy_perfilnecesario`
+  MODIFY `id_relacion` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `rel_proy_sector`
+--
+ALTER TABLE `rel_proy_sector`
+  MODIFY `id_relacion` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `rel_usuario_perfil`
+--
+ALTER TABLE `rel_usuario_perfil`
+  MODIFY `id_relacion` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `sectores`
+--
+ALTER TABLE `sectores`
+  MODIFY `id_sector` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuario` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `busqueda_colaboradores`
+--
+ALTER TABLE `busqueda_colaboradores`
+  ADD CONSTRAINT `busqueda_colaboradores_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `busqueda_colaboradores_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `busqueda_proyectos`
+--
+ALTER TABLE `busqueda_proyectos`
+  ADD CONSTRAINT `busqueda_proyectos_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `busqueda_proyectos_ibfk_2` FOREIGN KEY (`id_sector`) REFERENCES `sectores` (`id_sector`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `proyectos`
+--
+ALTER TABLE `proyectos`
+  ADD CONSTRAINT `proyectos_ibfk_1` FOREIGN KEY (`id_propietario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `rel_neg_busquedacolab`
+--
+ALTER TABLE `rel_neg_busquedacolab`
+  ADD CONSTRAINT `rel_neg_busquedacolab_ibfk_1` FOREIGN KEY (`id_busqueda`) REFERENCES `busqueda_colaboradores` (`id_busqueda`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rel_neg_busquedacolab_ibfk_2` FOREIGN KEY (`id_negociacion`) REFERENCES `negociacion` (`id_negociacion`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `rel_neg_proy`
+--
+ALTER TABLE `rel_neg_proy`
+  ADD CONSTRAINT `rel_neg_proy_ibfk_1` FOREIGN KEY (`id_busqueda`) REFERENCES `busqueda_proyectos` (`id_busqueda`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rel_neg_proy_ibfk_2` FOREIGN KEY (`id_negociacion`) REFERENCES `negociacion` (`id_negociacion`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `rel_proy_perfilnecesario`
+--
+ALTER TABLE `rel_proy_perfilnecesario`
+  ADD CONSTRAINT `rel_proy_perfilnecesario_ibfk_1` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rel_proy_perfilnecesario_ibfk_2` FOREIGN KEY (`id_perfilnecesario`) REFERENCES `perfiles` (`id_perfiles`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `rel_proy_sector`
+--
+ALTER TABLE `rel_proy_sector`
+  ADD CONSTRAINT `rel_proy_sector_ibfk_1` FOREIGN KEY (`id_sector`) REFERENCES `sectores` (`id_sector`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rel_proy_sector_ibfk_2` FOREIGN KEY (`id_proyecto`) REFERENCES `proyectos` (`id_proyecto`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `rel_usuario_perfil`
+--
+ALTER TABLE `rel_usuario_perfil`
+  ADD CONSTRAINT `rel_usuario_perfil_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rel_usuario_perfil_ibfk_2` FOREIGN KEY (`id_perfil`) REFERENCES `perfiles` (`id_perfiles`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_credencial`) REFERENCES `credenciales` (`id_credencial`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

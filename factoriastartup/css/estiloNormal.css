@@ -1,0 +1,1463 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+div.login{
+	margin: 8%;
+	margin: 150px 0;
+}
+
+div.registro{
+	margin: 8%;
+}
+
+main .article{
+	margin: 110px 0;
+	padding-top: 120px; /* Espacio entre el encabezado y el contenido del artículo */
+	margin-top: 120px; /* Ajuste para evitar solapamiento */  
+}
+
+
+.comienzo {
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.margen {
+    width: 100%;
+    box-sizing: border-box;
+    height: 800px;
+    padding-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/*FORO*/
+
+div.foro {
+	padding: 20px;
+	width: 90%;
+	margin: 30px auto;
+	max-width: 1000px;
+	background-color: rgba(255, 255, 255, 0.3); /* Ajusta el color y la opacidad del recuadro */
+	display: flex;
+	justify-content: space-between;
+	/*para alinear los dos divs en los extremos opuestos*/
+	flex-direction: row;
+}
+
+div.temas  {
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	text-align: center;
+	align-items: center;
+	background-color: rgba(245, 245, 245, 0.9); /* Ajusta el color y la opacidad del recuadro */
+	/* para que el elemento esté a la izquierda */
+	flex: 1;
+	/*para dividir los divs en dos columnas de igual ancho*/
+	float: right;
+}
+
+div.temas div.mensajePadre {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	height: auto;
+	padding: 20px;
+	align-items: center;
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	text-align: center;
+}
+
+div.temas div.mensajePadre p {
+	order: -1;
+	margin-right: 5px;
+	margin: 0;
+	text-align: center;
+}
+
+
+div.temas h3 {
+	margin-top: 10px;
+	text-align: center;
+	margin-bottom: 30px;
+	text-decoration: none;
+	margin-bottom: 35px;
+	font-size: 22px;
+}
+
+div.crearMensaje { /* EL CODIGO ES EL MISMO QUE DIV.TEMAS  */ 
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	text-align: center;
+	align-items: center;
+	background-color: rgba(245, 245, 245, 0.9); /* Ajusta el color y la opacidad del recuadro */
+	/* para que el elemento esté a la izquierda */
+	flex: 1;
+	/*para dividir los divs en dos columnas de igual ancho*/
+	float: right;
+	margin-right: 30px;
+}
+
+
+div.crearMensaje h2 {
+	font-size: 22px;
+	margin-top: 10px;
+	text-decoration: none;
+	margin-bottom: 45px;
+}
+
+div.crearMensaje label {
+	display: block;
+    float: center;
+    margin-right: 0.5em;
+    display: block;
+    /* width: 300%; */
+    /* max-width: 100%; */
+    
+}
+
+div.crearMensaje input[type="text"],
+div.crearMensaje textarea {
+	background-color: hsl(0, 0%, 98%);
+    /* width: 408px; */
+    width: 99%;
+    height: 40px;
+    border-color: #ccc;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+div.crearMensaje input[type="submit"] {
+	cursor: pointer;
+    color: #fff;
+    background-color: #004b8d;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto; 
+    text-transform: capitalize;
+    border: none;
+}
+
+div.crearMensaje input[type="submit"]:hover {
+	background-color: #4e50b2;
+}
+
+/*
+div.mensajeHijo{
+	background-color: #e2e2e2;
+	border: 1px solid #aaa;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+*/
+/*div.foroTitulo h1 {
+	font-size: 30px;
+	text-align: letf;
+	color: #000000;
+	text-decoration: none;
+}*/
+
+#foro p.contenido {
+	font-size: 20px;
+}
+
+form#formForo {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding: 10px;
+	background-image: url('../img/calendarioFondo.png');
+	background-size: cover;
+	margin: 110px 0;
+}
+
+#foro label {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#foro input[type="text"],
+#foro textarea {
+	padding: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+#foro textarea {
+	resize: vertical;
+	min-height: 100px;
+}
+
+#foro input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#foro input[type="submit"]:hover {
+	background-color: #555;
+}
+
+#foro p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+#foro p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	font-family: "Times New Roman", Times, serif;
+	color: #333;
+	text-align: justify;
+	text-indent: 20px;
+	border-left: 2px solid #ccc;
+	padding-left: 20px;
+}
+
+
+
+#foro .mensaje {
+	background-color: #f0f8ff;
+	border: 2px solid #add8e6;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+div.foroContinuo div.mensajeHijo {
+	border-left: 2px solid #333;
+	margin-left: 140px;
+	font-size: 18px;
+	color: #333;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	height: auto;
+	width: 80%;
+	padding: 20px;
+}
+
+
+
+
+/*FOROINDIVIDUAL*/
+
+.foroContinuo {
+	margin-top: 20px;
+	background-color:white;
+	width: 70%;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 70px;
+	margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+	.foroContinuo {
+		width: 90%;
+	}
+}
+
+.foroContinuo .mensajePadre {
+	
+	border-left: 2px solid #333;
+	margin-left: 140px;
+	font-size: 18px;
+	color: #333;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid #ccc;
+	margin-bottom: 40px;
+	margin-top: 10px;
+	padding: 10px;
+	height: auto;
+	width: 80%;
+	padding: 20px;
+}
+.foroContinuo .mensajePadre .mensajePadrefecha, div.foroContinuo div.mensajeHijo .mensajeHijofecha{
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	margin-bottom: 10px;
+}
+
+.foroContinuo .mensajePadre .mensajePadrefecha p, div.foroContinuo div.mensajeHijo p{
+	font-size: 12px;
+}
+
+
+.foroContinuo .mensajePadre .mensajeP h2{
+	margin-top: 0;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.foroContinuo .foto {
+	flex-basis: 30%;
+	width: 125px;
+	height: 120px;
+	float: left;
+	margin-left: 10px;
+}
+
+.foroContinuo .mensajeP {
+	flex-basis: 70%;
+	padding-left: 20px;
+	order: 2;
+}
+
+
+
+.mensajePadre .foto {
+	margin-right: 20px;
+	max-width: 125px;
+}
+
+.mensajePadre.tituloPadre {
+	margin: 0;
+}
+
+.mensajeP p.tituloPadre {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.mensajePadre .autorPadre {
+	font-size: 12px;
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.mensajePadre .fechaPadre,
+.foroRespuesta .fecha {
+	font-size: 10px;
+	margin-top: 0;
+	text-align: right;
+}
+
+.mensajePadre .contenidoForoPadre {
+	padding: 10px;
+	font-size: 12px;
+	margin-bottom: 10px;
+}
+
+.mensajePadre .contenidoPadre {
+	display: block;
+    float: center;
+    margin-right: 0.5em;
+    display: block;
+    /* width: 300%; */
+    /* max-width: 100%;
+}
+
+.respuestasPadre {
+	margin-left: 20px;
+}
+
+div.foroTitulo {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+div.mensajePadre p {
+	margin-right: 5px;
+	font-weight: bold;
+	margin: 0;
+}
+
+div.contenidoForoPadre {
+	margin-top: 10px;
+}
+
+form#formForoContinua {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+	padding: 10px;
+	/*background-color: #105582;*/
+	height: auto;
+	overflow: hidden;
+	justify-content: center;
+}
+
+@media (max-width: 768px) {
+	form#formForoContinua {
+		width: 90%;
+	}
+}
+
+.respuestaForo {
+	background-color: #f3f3f3;
+	border-left: 2px solid #333;
+	margin-left: 140px;
+	font-size: 18px;
+	color: #333;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding: 10px;
+	height: auto;
+	width: 80%;
+	padding: 40px;
+	align-items: center;
+
+}
+
+@media screen and (max-width: 1200px) {
+	.respuestaForo{
+		margin-left: 30px;
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.foroContinuo .mensajePadre {
+		margin-left: 30px;
+		max-width: 100%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	div.foroContinuo div.mensajeHijo {
+		margin-left: 30px;
+		max-width: 100%;
+	}
+}
+
+.foroRespuesta p.respuesta {
+	margin-top: 0;
+	text-align: left;
+	font-size: 22px;
+	font-weight: bold;
+	margin-left: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	.foroRespuesta{
+		margin-left: 0;
+	}
+}
+
+
+.respuestaForo h2 {
+	margin-top: 0;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.respuestaForo label {
+	display: block;
+    float: center;
+    margin-right: 0.5em;
+    display: block;
+    /* width: 300%; */
+    /* max-width: 100%; */
+    text-align: left;
+}
+
+.respuestaForo input[type="text"],
+input[type="email"],
+.respuestaForo textarea#contenido {
+	background-color: hsl(0, 0%, 98%);
+    /* width: 408px; */
+    width: 103%;
+    height: 40px;
+    border-color: #ccc;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+
+
+.respuestaForo input[type="submit"] {
+	cursor: pointer;
+    color: #fff;
+    background-color: #004b8d;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto; 
+    text-transform: capitalize;
+    border: none;
+	align-items: center;
+}
+
+.respuestaForo input[type="submit"]:hover {
+	background-color: #4750a3;
+}
+
+
+
+/*CONTACTO*/
+
+.contacto input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+textarea,
+input.text,
+input[type="search"] {
+	background: none;
+	border: none;
+	border-bottom: 1px solid #464646;
+	color: #d7d7d7;
+	padding: 20px 15px;
+	font-size: 16px;
+	margin: 0;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-family: 'Lato', sans-serif;
+	text-transform: none;
+}
+
+.contacto textarea {
+	margin-bottom: 20px;
+}
+
+.contacto textarea {
+	height: 135px;
+	overflow: auto;
+}
+
+.contacto {
+	background: #ededff;
+	width: 100%;
+	float: left;
+	margin-top: 56px;
+}
+
+.contacto #contenedor-contacto {
+	padding: 80px 0px;
+	width: 100%;
+	float: left;
+}
+
+.contacto .container-contacto {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	clear: both;
+}
+
+.contacto .formulario-contacto:before {
+	position: absolute;
+	width: 1px;
+	height: 380px;
+	right: auto;
+	left: -5%;
+	top: -15px;
+	margin: 0px auto;
+	display: block;
+	content: "";
+	background: #464646;
+}
+
+.contacto .info-contacto {
+	color: rgb(0, 0, 0);
+	text-align: left;
+	margin-bottom: 20px;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.contacto .info-contacto p {
+	width: 90%;
+}
+
+.contacto .alinearIzq {
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.contacto .bloque-contacto {
+	margin-right: 150px;
+	float: left;
+}
+
+.contacto .bloque {
+	float: left;
+	width: 800px;
+}
+
+.contacto .formulario-contacto input[type="submit"] {
+	width: 100%;
+	color: #252525;
+	padding: 15px 0px;
+	font-size: 20px;
+}
+
+.contacto .formulario-contactoinput[type="submit"]:hover {
+	background: #fff;
+}
+
+.contacto .info-contacto h5.sub-title {
+	padding-bottom: 10px;
+}
+
+.contacto .info-contacto i {
+	float: left;
+	margin-right: 10px;
+	margin-top: 6px;
+	font-size: 16px;
+}
+
+.contacto .submit {
+	background-color: transparent;
+	border: 1px solid black;
+	color: #252525;
+}
+
+/*CONTACTAR*/
+.contact_form {
+	width: 600px;
+	height: auto;
+	margin: 10px auto;
+	border-radius: 3px;
+
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+
+	box-shadow: 0px 0px 3px #ccc;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+.contact_form .formulario {
+	width: 80%;
+	/* ancho del formulario */
+	margin: 0 auto;
+	/* centrar horizontalmente */
+}
+
+.contact_form input, select {
+	background-color: hsl(0, 0%, 98%);
+	width: 408px;
+	height: 40px;
+	border-color: #ccc;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 10px;
+	padding-left: 10px;
+	margin-bottom: 15px;
+	font-size: 17px;
+}
+
+.contact_form textarea {
+	color:rgb(0, 0, 0);
+	height: 50px;
+	padding-top: 15px;
+	margin-bottom: 20px;
+	background-color: hsl(0, 0%, 98%);
+	width: 408px;
+	margin-left: 80px; 
+	border-color: #ccc;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.contact_form label {
+	display: block;
+	float: center;
+	margin-right: 0.5em;
+	display: block;
+	width: 300%;
+	max-width: 100%;
+	/*va a ser lo que ocupe el texto a lo largo */
+	text-align: left;
+}
+
+.contact_form button {
+	height: 40px;
+	width: 150px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 10px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	background-color: #f3f3f3;
+	border: 1px solid #000000;
+	border-radius: 2px;
+	border-color: #000000;
+	cursor: pointer;
+	display: block;
+	/* convierte el botón en un bloque para poder alinear horizontalmente */
+
+}
+
+
+.contact_form div.botonn{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contact_form button p {
+	color: rgb(0, 0, 0);
+}
+
+.contact_form span {
+	color: #053c96;
+}
+
+.contact_form h1 {
+	font-size: 30px;
+	text-align: letf;
+	color: #000000;
+	text-decoration: none;
+}
+
+.contact_form h3 {
+	font-size: 16px;
+	color: #0e0e0e;
+}
+
+.contact_form p {
+	font-size: 14px;
+	color: #0e0e0e;
+}
+
+
+.contact_form .btn-container {
+	text-align: center;
+}
+
+.contact_form .btn-container button {
+	display: inline-block;
+	text-decoration: none;
+	
+}
+
+
+.contact_form div.formulario button {
+	cursor: pointer;
+    color: #fff;
+    background-color: #5c5c5c;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+	width: auto;
+	text-transform: capitalize;
+	border: none;
+}
+
+.contact_form div.formulario button:hover {
+	background-color: #a6a6a6;
+    color: #333;
+}
+
+
+.contacto_mapa iframe {
+	width: 100%;
+	height: 380px;
+}
+/*vista EVento*/
+body.VistaEvento main.vista{
+	margin: 150px 0;
+
+}
+body.VistaEvento main.vista div.container{
+	width: auto;
+	height: 600px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+body.VistaEvento main.vista div.container div.row{
+	display: flex;
+    justify-content: center;
+}
+body.VistaEvento main.vista div.container div.row div.columImg{
+	width: 50%;
+    box-shadow: 0px 0px 5px #ccc;
+    background-color: #f1f1f1;
+    margin-left: 3%;
+    margin-right: 1%;
+	align-items: center;
+	justify-content: center;
+}
+body.VistaEvento main.vista div.container div.row div.columInfo{
+	width: 50%;
+    box-shadow: 0px 0px 5px #ccc;
+    background-color: #f1f1f1;
+    margin-left: 3%;
+    margin-right: 1%;
+
+}
+body.VistaEvento main.vista div.container div.row div.columInfo h2{
+	margin-top: 30px;
+}
+
+html body.vistaPost main.vista{
+	margin: 150px 0;
+}
+body.vistaPost main.vista div.container div.row div.columInfo div.descripcion{
+	margin-top: 20px;
+	width: 80%;
+	
+}
+
+body.vistaPost main.vista div.atras{
+	margin-top: 50px;
+}
+body.VistaEvento main.vista div.atras a.atras, body.vistaPost main.vista div.atras a.atras{
+	cursor: pointer;
+    color: #fff;
+    background-color: #2596be;
+    border-radius: 2px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    /* width: auto; */
+    text-transform: capitalize;
+    border: none;
+    margin-left: 2%;
+}
+/*ACERCA DE NOSOTORS*/
+
+.fondoQuienesSomos {
+	width: 100%;
+	height: 400px;
+	font-size: 20px;
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: left;
+	padding: 0 60px;
+	margin-bottom: 100px;
+	margin-top: 100px;
+	background-color: #f2f2f2;
+	position: relative;
+  }
+  
+  .fondoQuienesSomos .image {
+	justify-content: flex-end;
+  }
+  
+  .fondoQuienesSomos .content .contenido {
+	order: 1; /* Cambia el orden para colocar el contenido a la izquierda */
+  }
+  
+  
+.fondoQuienesSomos h1 {
+	color: rgb(255, 253, 253);
+	font-size: 35px;
+	margin-bottom: 30px;
+	color:#004b8d;
+}
+.fondoQuienesSomos h2 {
+	font-size: 17px;
+	color: white;
+	margin-bottom: 30px;
+	color:#004b8d;
+}
+
+.overlay {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+  
+.overlay .lista {
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+	
+  }
+  
+  .overlay .lista ul {
+	list-style-type: none;
+	padding: 0;
+	color: black;
+	text-align: center;
+	font-size: 15px;
+  }
+  
+  .overlay .lista li {
+	
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+	color: black;
+  }
+  
+  .overlay .lista li::before {
+	content: "-";
+	margin-right: 5px;
+  }
+  
+
+
+.overlay p {
+	display: flex;
+	font-size: 17px;
+	color: black;
+	align-items: center;
+	justify-content: center;
+	margin-left: 195px;
+	margin-bottom: 30px;
+}
+.contenedorMiembro {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 100px;
+	justify-content: center;
+	/* centra horizontalmente */
+	align-items: center;
+	/* centra verticalmente */
+}
+.contenedorMiembro .titulo{
+	margin-bottom: 40px;
+	font-weight:lighter;
+}
+
+.contenedorMiembro h1 {
+	font-size: 20px;
+	
+}
+div.overlay div.boton{
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+div.overlay button.boton {
+	cursor: pointer;
+	margin-top: 70px;
+    color: #fff;
+    background-color: #004b8d;
+	color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: auto;
+    text-transform: capitalize;
+    border: none;
+	align-items: center;
+  }
+  
+  div.overlay button.boton a{
+	display: block;
+	text-decoration: none;
+	color: white;
+  }
+    
+  div.overlay button.boton:hover {
+	background-color: #a79292;
+  }
+  
+  div.overlay button.boton a:hover {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	width: 200px;
+	height: 300px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	/* Establece un recorte para la imagen */
+}
+
+.card img {
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+}
+
+.card-content {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.card-content h2 {
+	margin: 0;
+	font-size: 15px;
+}
+
+.card-content p {
+	font-size: 10px;
+	color: rgb(67, 67, 67);
+}
+
+.columnaMiembro {
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+/*CREAR EVENTO*/
+
+form#formCrearEvento {
+	align-items: center;
+	margin-top: 40px;
+	margin: 110px 0;
+	height: 100%;
+}
+
+div.eliminarEvento,
+div.modificarEvento {
+	background-color: #e6f245;
+	margin-top: 40px;
+	height: 600px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	/* horizontally center the child elements */
+}
+
+div.crearEvento{
+	background-color: #4368d6;
+	margin-top: 40px;
+	height: 700px;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	/* horizontally center the child elements */
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+	/* Estilos para pantallas más pequeñas */
+	div.crearEvento,
+	div.eliminarEvento,
+	div.modificarEvento{
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 769px) {
+
+	/* Estilos para pantallas más grandes */
+	div.crearEvento,
+	div.eliminarEvento,
+	div.modificarEvento{
+		width: 50%;
+	}
+}
+
+div.contactForm {
+	background-color: transparent;
+	align-items: center;
+	height: 600px;
+}
+
+div.eliminarEvento div.contactForm{
+	background-color: transparent;
+	align-items: center;
+	height: 500px;
+}
+
+.crearEvento fieldset,
+div.eliminarEvento fieldset,
+div.modificarEvento fieldset{
+	/* background-color:#5198c8;*/
+	border-radius: initial;
+	box-shadow: initial;
+	margin-bottom: 40px;
+	width: 400px;
+	margin-top: 20px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.crearEvento h2,
+div.eliminarEvento h2,
+div.modificarEvento h2{
+	font-size: 30px;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;
+	/* alinear el texto al centro */
+	margin: 0 auto;
+	/* establecer un margen izquierdo y derecho automático */
+	width: fit-content;
+	/* ajustar el ancho del elemento al contenido */
+	margin-bottom: 30px;
+	margin-top: 20px;
+	font-weight: 100;
+}
+
+.crearEvento label,
+div.eliminarEvento label,
+div.modificarEvento label{
+	display: block;
+	font-size: 16px;
+	margin-bottom: 10px;
+	margin-top: 20px;
+	font-weight: 100;
+}
+
+.crearEvento input[type="text"],
+input[type="fecha"],
+input[type="submit"],
+input[type="date"]{
+	background-color: #fbfbfb;
+	width: 408px;
+	height: 40px;
+	border-color: #ccc;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 30px;
+	padding-left: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+
+.crearEvento input[type="submit"]{
+	background-color: #eae9f4;
+	color: #171616;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 40px;
+	width: 120px;
+	/* Nuevo ancho */
+	height: 30px;
+	/* Nueva altura */
+
+}
+
+.crearEvento input[type="submit"]:hover{
+	background-color: #557ca8;
+	color: #eae9f4;
+}
+
+.modificarEvento input[type="text"],
+input[type="fecha"],
+input[type="submit"],
+input[type="date"]{
+	background-color: #fbfbfb;
+	width: 408px;
+	height: 40px;
+	border-color: #ccc;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 30px;
+	padding-left: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+
+.modificarEvento input[type="submit"]{
+	background-color: #eae9f4;
+	color: #171616;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 40px;
+	width: 120px;
+	/* Nuevo ancho */
+	height: 30px;
+	/* Nueva altura */
+
+}
+
+.modificarEvento input[type="submit"]:hover{
+	background-color: #557ca8;
+	color: #eae9f4;
+}
+
+.eliminarEvento input[type="text"],
+input[type="fecha"],
+input[type="submit"],
+input[type="date"]{
+	background-color: #fbfbfb;
+	width: 408px;
+	height: 40px;
+	border-color: #ccc;
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 30px;
+	padding-left: 10px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+
+.eliminarEvento input[type="submit"]{
+	background-color: #eae9f4;
+	color: #171616;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 40px;
+	width: 120px;
+	/* Nuevo ancho */
+	height: 30px;
+	/* Nueva altura */
+
+}
+
+.eliminarEvento input[type="submit"]:hover{
+	background-color: #557ca8;
+	color: #eae9f4;
+}
+
+
+/*BLOG*/
+
+/* Estilos generales */
+.div {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .blog {
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+	width: 50%;
+	box-sizing: border-box;
+  }
+  
+  .blog:nth-child(odd) {
+	margin-right: 20px;
+  }
+  
+  .blog img {
+	max-width: 100%;
+	display: block;
+	margin-bottom: 10px;
+  }
+  
+  .blog h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .blog_p p {
+	margin-bottom: 10px;
+  }
+  
+  /*CSS DE CREAR PROYECTO*/
+/*
+div.ProyectoCrear, .PostCrear{
+    margin: 110px 0;
+}
+
+div.ProyectoCrear .contact_form, .PostCrear .contact_form{
+	width: 40%;
+	padding: 0%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+
+div.ProyectoCrear .contact_form .formulario, .PostCrear .contact_form .formulario{
+	flex-direction: column;
+	align-items: center;
+	display: flex;
+}
+  
+  
+div.ProyectoCrear .contact_form input, .PostCrear .contact_form input{
+	width: 200%;
+}
+
+div.ProyectoCrear .contact_form label, .PostCrear .contact_form label {
+	width:auto;
+
+
+}
+
+div.ProyectoCrear .contact_form textarea, .PostCrear .contact_form textarea{
+	height: 300%;
+	margin-left: 0;
+	width: 200%;
+}*/
+
+/* FIN CSS CREAR PROYECTO */
+
+
+
+/*CSS DE SELECCIONAR VARIAS OPCIONES EN REGISTRO*/
+form#formRegistro .form-container {
+	width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	background-color: #f4f4f4;
+  }
+  
+  form#formRegistro div.linea {
+	display: flex;
+	margin-bottom: 10px;
+	align-items: center;
+  }
+  
+  form#formRegistro input[type="submit"] {
+	width: 10%;
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+
+  }
+
+
+/*FIN DE SELECCIONAR VARIAS OPCIONES EN REGISTRO*/
+
+.bodyConfirmacion{
+	font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /*background-color: #007bff;*/
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}  
+
+  .confirmacion {
+	margin: 110px 0;
+	max-width: 600px;
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	
+  }
+  
+  .confirmacion h1 {
+	color: #007bff;
+  }
+  
+  .confirmacion p {
+	font-size: 18px;
+	line-height: 1.6;
+	color: #333;
+  }
+  
+
+  
+/*CONFIRMACION CONTACTOS*/
